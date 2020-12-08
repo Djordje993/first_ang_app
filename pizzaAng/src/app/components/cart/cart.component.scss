@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+.cart-wrap{
+    @include popup;
+    text-align: center;
+}
+.pizza-in-cart{
+    margin: 0 5px;
+}
+.button-wrap{
+    display: flex;
+    button{
+        flex-grow: 1;
+    }
+}

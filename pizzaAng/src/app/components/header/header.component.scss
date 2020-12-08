@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+.header-wrap{
+    text-align: center;
+    background-color: $back-color;
+    color: #fff;
+    padding: 10px 0;
+    h1{
+        margin: 10px 0;
+    }
+    p{
+        margin: 5px 0;
+    }
+}

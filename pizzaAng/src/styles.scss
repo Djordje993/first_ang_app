@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+}
+button{
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 5px 30px;
+}
+$back-color: rgb(5, 129, 5);
+@mixin img-display{
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+@mixin popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 10000;
+    >div{
+        border: 1px solid orange;
+        border-radius: 5px;
+        padding: 20px;
+        flex-basis: 40%;
+        background-color: $back-color;
+        color: #fff;
+        max-height: 90%;
+        overflow: auto;
+    }
+}

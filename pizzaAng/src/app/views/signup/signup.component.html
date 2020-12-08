@@ -1,0 +1,26 @@
+<div class="signup-wrap">
+    <div>
+        <p>
+            Username: 
+            <input [(ngModel)]="usernameInput" type="text">
+        </p>
+        <p>
+            Email: 
+            <input [(ngModel)]="emailInput" type="text">
+        </p>
+        <p>
+            Password: 
+            <input [(ngModel)]="passwordInput" type="password">
+        </p>
+        <p>
+            Adress: 
+            <input [(ngModel)]="adressInput" type="text">
+        </p>
+        <div>
+            <p>
+                <button (click)="handleSignup()">Confirm</button>
+                <button (click)="close()">Cancel</button>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <div class="background"></div>
+  <app-header></app-header>
+  <p class="links-wrap">
+    <a routerLink="/home" routerLinkActive="active-link">Home</a> || 
+    <a routerLink="/about" routerLinkActive="active-link">About</a> || 
+    <a routerLink="/login" routerLinkActive="active-link">{{loginName}}</a>
+  </p>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>
+

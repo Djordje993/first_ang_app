@@ -1,0 +1,29 @@
+<div class="pizza-info-wrap">
+    <div>
+        <h3>{{singlePizzaInfo.pid_name}}</h3>
+        <div class="pizza-info-innerwrap">
+            <div 
+                class="pizza-info-img"
+                [ngStyle]="{'background-image': 'url('+singlePizzaInfo.pid_image+')'}">
+            </div>
+            <div>
+                <p>Price: {{singlePizzaInfo.pid_price}}&euro;</p>
+                <p>
+                    Toppings:
+                </p>
+                <ul>
+                    <li *ngFor="let i of singlePizzaInfo.toppings">
+                        {{i}}
+                    </li>
+                </ul>
+                <div>
+                    <p><i>Description:</i></p>
+                    <p class="pizza-info-description"><i>
+                        {{singlePizzaInfo.pid_description}}
+                    </i></p>
+                </div>
+            </div>
+        </div>
+        <button (click)="close()">X</button>
+    </div>
+</div>

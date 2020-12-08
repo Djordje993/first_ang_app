@@ -1,0 +1,33 @@
+@import '../styles.scss';
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../assets/backgroundPizza.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    opacity: 0.58;
+}
+.links-wrap{
+    text-align: center;
+    background-color: $back-color;
+    padding: 10px 0;
+    color: #fff;
+    margin: 0;
+}
+a{
+ text-decoration: none;
+ color: inherit;
+ display: inline-block;
+ padding: 10px;
+ border: 2px solid #fff;
+ border-radius: 5px;
+}
+.active-link{
+    color: orange;
+}

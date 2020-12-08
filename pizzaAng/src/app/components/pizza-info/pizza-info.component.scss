@@ -1,0 +1,37 @@
+@import "../../../styles.scss";
+.pizza-info-wrap{
+    @include popup;
+    >div{
+        flex-basis: 55%;
+        min-height: 55%;
+        position: relative;
+    }
+    h3{
+        text-align: center;
+    }
+    button{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+.pizza-info-innerwrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >div:nth-of-type(2n){
+        max-width: 50%;
+        text-align: center;
+        .pizza-info-description{
+            text-align: justify;
+        }
+    }
+}
+.pizza-info-img{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+}

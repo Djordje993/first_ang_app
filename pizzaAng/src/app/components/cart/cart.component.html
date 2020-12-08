@@ -1,0 +1,31 @@
+<div class="cart-wrap">
+    <div>
+        <div *ngIf="cartData.length===0">
+            <p><i>Your cart is empty!</i></p>
+            <p class="button-wrap">
+                <button (click)="close()"
+                    >Close</button>
+            </p>
+        </div>
+        <div *ngIf="cartData.length>0">
+            <div *ngFor="let i of cartData; index as idx"
+                class="pizza-in-cart">
+                {{i.pid_name}} - {{i.pid_price}}&euro;
+                <button (click)="removePizza(idx)"
+                    >Remove Pizza</button>
+            </div>
+            <p>Full Price: {{fullPrice}}&euro;</p>
+            <p class="button-wrap">
+                <button (click)="handleOrder()">
+                    Order</button>
+                <button (click)="close()"
+                    >Close</button>
+            </p>
+        </div>
+        <app-givemail
+            *ngIf="askForMailOpened" 
+            (giveMailEmitter)="handleMailGiving($event)"
+            (closeEmitter)="toggleAskForMail()">
+        </app-givemail>
+    </div>
+</div>

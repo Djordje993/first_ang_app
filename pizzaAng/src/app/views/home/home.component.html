@@ -1,0 +1,35 @@
+<div>
+    <div 
+        class="cart-button"
+        (click)="toggleCart()">
+    Cart : {{cartData.length}}</div>
+    <app-cart 
+        *ngIf="cartOpened"
+        [cartData]="cartData"
+        (removePizzaEmitter)="removeFromCart($event)"
+        (removeAllPizzas)="emptyCart()"
+        (closeEmitter)="toggleCart()">
+    </app-cart>
+    
+    <div class="allpizzas-wrap">
+        <div *ngFor="let i of allPizzas; index as idx"
+            class="mini-pizza-display">
+            <p>{{i.pid_name}}</p>
+            <div 
+                [ngStyle]="{'background-image': 'url('+i.pid_image+')'}"
+                class="img-div">
+            </div>
+            <p>{{i.pid_price}} &euro;</p>
+            <button (click)="selectSinglePizza(idx)">
+                MORE INFO</button>
+            <button (click)="addToCart(idx)">
+                ADD TO CART</button>
+        </div>
+    </div>
+
+    <app-pizza-info 
+        *ngIf="pizzaInfoOpened" 
+        [singlePizzaInfo]="singlePizzaInfo"
+        (closeEmitter)="togglePizzaInfo()">
+    </app-pizza-info>
+</div>

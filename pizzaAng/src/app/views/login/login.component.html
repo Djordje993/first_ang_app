@@ -1,0 +1,28 @@
+<div class="login-wrap">
+    <div *ngIf="!currentUser.name">
+        <p>Username: <input [(ngModel)]="usernameInput" type="text"></p>
+        <p>Password: <input [(ngModel)]="passwordInput" type="password"></p>
+        <button (click)="handleLogin()">Log In</button>
+        <p>
+            You dont have an account? Create one 
+            <span 
+                class="clicking-text"
+                (click)="showSignUp=!showSignUp">
+                HERE!
+            </span>
+        </p>
+    </div>
+    <div *ngIf="currentUser.name">
+        <p>
+            Welcome {{currentUser.name}}!
+        </p>
+        <p>
+            <button (click)="logout()"
+                >Log Out</button>
+        </p>
+    </div>
+</div>
+<app-signup 
+    *ngIf="showSignUp" 
+    (closeEmitter)="showSignUp=!showSignUp"
+></app-signup>
